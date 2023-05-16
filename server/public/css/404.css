@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 36px;
+  min-height: 100vh;
+  color: #fff;
+  background-color: #000;
+  /* background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% ); */
+  display: grid;
+  place-content: center;
+
+}
+
+h3{
+  font-family: "Roboto Mono", monospace;
+  color: #fff;
+} 
+

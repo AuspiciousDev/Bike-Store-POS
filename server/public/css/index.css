@@ -1,0 +1,61 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 36px;
+  min-height: 100vh;
+  color: #fff;
+  background-color: #000;
+  background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+  display: grid;
+  place-content: center;
+
+}
+
+h1{
+  font-family: "Poppins", sans-serif;
+  colo
+} */
+
+/* We’ll set some colors and center everything. */
+
+body {
+  /* background: #4c268f; */
+  /* background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% ); */
+  /* color: #99eeb4; */
+  color: #05BCFF;
+  min-height: 90vh;
+  display: grid;
+  place-content: center;
+}
+
+/* We set the position to relative so that we can stack a blurred pseudo element on top of the original text */
+
+span {
+  position: relative;
+  font-size: 64px;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 0.1em;
+  display: inline-block;
+}
+
+/* We create a pseudo element and blur it using the SVG filter. We’ll grab the content from the custom HTML attribute. */
+
+span:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: attr(filter-content);
+
+  filter: url(#motion-blur-filter);
+}
+
+/* We hide the SVG filter element from the DOM as it would take up some space */
+
+svg {
+  display: none;
+}
